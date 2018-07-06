@@ -1,0 +1,111 @@
+/* CSS Document */
+body,html {
+	font-size:12px;
+	font-family: "Microsoft YaHei", "Arial", "WenQuanYi Micro Hei", sans-serif;
+	line-height:22px;
+	color: #464646;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+ul,dl,dd,h1,h2,h3,h4,h5,h6,form,p { padding:0; margin:0;}
+ul { list-style:none;}
+img { border:0px;}
+a {
+	color:#464646;
+	text-decoration: none;
+}
+a:hover,a:visited{
+	text-decoration: none;
+}
+.clearfloat {clear:both;} 
+.lf {
+	float: left;
+}
+.rt {
+	float: right;
+}
+.text-center{text-align: center}
+
+/*登录注册页面*/
+.login{background: url(../images/bg1.gif) no-repeat;width: 100%;padding-top: 1.3rem;background-size: 100% 100%;padding-bottom: .5rem}
+.login-p1{text-transform: uppercase;font-size: 1.01rem;font-family: Arial;line-height: 1.1rem;color:#fff;}
+.login-p2{font-size: 0.505rem;color: #fff;}
+.login-p3{font-size: .4rem;color: #fff;margin-top: .5rem}
+.login-p4{font-size: .3rem;color: #ffcdc2;font-family: Arial;text-transform: uppercase;margin-top:.1rem}
+.login-box{width: 86%;margin: 0 auto;margin-top:1.3rem}
+.inp1{background: url(../images/icon1.gif) no-repeat left;border: 1px solid #d5bcbc;height: 1rem;border-radius: .5rem;background-position-x:5px;padding-left: 40px;width: 90%;font-size: 16px;color:#999999 ;margin-bottom: .55rem;background-size:.8rem}
+.inp2{background: url(../images/icon2.gif) no-repeat left;border: 1px solid #d5bcbc;height: 1rem;border-radius: .5rem;background-position-x:5px;padding-left: 40px;width: 40%;font-size: 16px;color:#999999;margin-bottom: .55rem;background-size: .8rem }
+.send-mail{background: #ff5b6c;width: 42%;height: 1rem;border-radius: .5rem;color: #fff;border: 0px;margin-left: 2%;font-size: .4rem;}
+.inp3{background: url(../images/icon3.gif) no-repeat left;border: 1px solid #d5bcbc;height: 1rem;border-radius: .5rem;background-position-x:5px;padding-left: 40px;width: 90%;font-size: 16px;color:#999999 ;margin-bottom: .55rem;background-size: .8rem}
+.inp4{background: url(../images/icon4.gif) no-repeat left;border: 1px solid #d5bcbc;height: 1rem;border-radius: .5rem;background-position-x:5px;padding-left: 40px;width: 90%;font-size: 16px;color:#999999 ;margin-bottom: .55rem;background-size: .8rem}
+.inp5{background: url(../images/icon5.jpg)no-repeat;border: 0px;height: 1.1rem;border-radius: .5rem;width: 100%;font-size: 16px;color:#fff ;margin-bottom: 15px;background-size: 100% 100%}
+.login-p5{font-size: 16px;text-align: center;margin-top: 5%;margin-bottom: 1.5rem}
+.login-p5 a{color:#ff5e64;border-bottom: 1px dashed #ff5e64}
+/*参与活动*/
+.tab-header{background: #ff684d;padding:10px 10px 0px 10px}
+.header-a1{display: inline-block;width: 49%;background: #fff;height: 1.4rem;line-height: 1.4rem;color: #ff684d;text-align: center;font-size: .5rem;
+	border-top-left-radius: 12px;border-top-right-radius: 20px}
+.header-a2{display: inline-block;width: 49%;height: 1.4rem;line-height: 1.4rem;color: #fff;text-align: center;font-size: .5rem;}
+.hd-p1{font-size:.45rem;margin-top: .48rem}
+.hd-p2{color: #ff615f;line-height: 30px;font-size: .3rem;margin-top: 5px;margin-bottom: .38rem}
+.hd-table{width: 95%;margin: 0 auto;line-height: 45px;font-size: 15px;border-left: 1px solid #dedede;color: #020202;margin-bottom: 60px}
+.hd-table tr td{ border-right:1px solid #dedede; border-bottom:1px solid #dedede;}
+.hd-table tbody tr:nth-child(even){background: #ececec}
+.hd-box1{background: url(../images/tab.jpg) no-repeat;width: 95%;height: 50px;background-size: 100% 100%;line-height: 50px;font-size: 18px;color: #fff;margin: 0 auto}
+.hd-box2{background: #ececec;}
+.hd-sp1{background: #ff5b6c;color: #fff;display: inline-block;width: 24px;height: 24px;line-height: 24px;border-radius:12px}
+.foot{position: fixed;width: 100%;height: 1.2rem;line-height: 1.2rem;background: #999999;color: #000;opacity: .9;font-size: .37rem;text-align: center;bottom: 0px;z-index: 10}
+.float-img{width: 1.6rem;height:1.5rem;position:fixed;right: 0px;bottom: 1.2rem}
+.float-img2{position: absolute;left: 0px;bottom: 4rem;width: 1rem}
+
+.hd-box3{width: 80%;height: 1rem;color: #fff;line-height: 1rem;background: url(../images/icon5.jpg) no-repeat;background-size: 100% 100%;padding-left: 5%;margin: 0 auto;font-size: 14px;margin-top: 30px;margin-bottom: 20px}
+.hd-box4{width: 80%;padding: 10px;border:1px solid #dedede;border-radius: 6px;margin: 0 auto;margin-top: .25rem;margin-bottom: .25rem}
+.hd-p3{font-size: .46rem;height: .55rem;line-height: .55rem;}
+.hd-sp2{background: url(../images/bg2.jpg) no-repeat;width: 1.8rem;height: .6rem;color:#fff;font-size: 14px;background-size: 100% 100%;display: inline-block;line-height: .6rem;text-align: center;margin-left: 5px;}
+.hd-p4{color: #7f7f7f;font-size: 14px;line-height: 26px;display: block}
+.hd-sp3{background:#ff5b6c;width: 1.8rem;height: 0.6rem;color:#fff;font-size: 14px;background-size: 100% 100%;display: inline-block;line-height: .6rem;text-align: center;margin-left: 5px;border-radius:.3rem}
+.hd-p5{font-size: 14px;color: #ff615f;padding-top: 8px;}
+.hd-sp4{background: #ff615f;color: #fff;padding: 0px 8px;display: inline-block;margin-right: 5px}
+.hd-sp5{display: inline-block;width: 66%;}
+.hd-a1{display:block;width: 3rem;height: 0.65rem;line-height: .65rem;font-size: 14px;color: #fff;text-align: center;background: #ff5d68;margin: 0 auto;margin-top: 10px}
+
+/*leibiao*/
+.lb-box{width: 95%;height:2.8rem;background: url(../images/bg3.jpg) no-repeat;background-size: 100% 100%;margin: 0 auto;margin-top: 1rem;color: #fff}
+.lb-width{width: 49%}
+.lb-box2{width: 95%;margin: 0 auto;margin-top: .65rem;border:1px solid #dedede;border-radius: 9px;padding-bottom: 10px}
+.lb-p1{font-size: .8rem;font-family: Arial;margin-top: .6rem}
+.lb-p2{font-size: .45rem;line-height: 1rem;}
+.lb-p3{font-size: .45rem;line-height:.5rem;padding-left: .3rem;display: block;width: 55%;padding-top: .2rem;padding-bottom: .2rem}
+.lb-p3 img{padding-left: 4px;width: .7rem;position: relative;top: -7px}
+.lb-p4{font-size: 14px;color: #717171;line-height:18px;padding-right: .3rem;display: block;width: 28%;padding-top: .2rem;padding-bottom: .2rem}
+.lb-box3{border-top:1px solid #dedede;}
+.lb-p5{width: 60%;padding-left: 2%;padding-top: .2rem}
+.lb-p5 a{color: #909090;font-size: .34rem;line-height: .45rem;display: block;}
+.lb-box4{width: 30%;text-align: center}
+.lb-p6{color: #787878;font-size: .35rem;padding-top: .2rem}
+.lb-p7{color: #ff615e;font-size:.45rem }
+.lb-a1{background: url(../images/lieb_07.jpg) no-repeat;width: 3rem;height: .8rem;background-size: 100% 100%;display: block;line-height: .8rem;color: #fff;margin: 0 auto;margin-top: .1rem;}
+.lb-p8{font-size: .45rem;line-height: .6rem;overflow: hidden;display: block;padding-right: 20px;display: inline-block}
+.lb-p8 img{padding-left: 5px}
+.lb-box5{width: 95%;margin: 0 auto;margin-top: .8rem;border-bottom: 1px solid #dedede}
+.lb-box6{width: 95%;margin: 0 auto;margin-top: .5rem;font-size: .34rem;color: #747474}
+.lb-box6 h3{font-size: .5rem;margin-bottom: .2rem;color: #333;font-weight: normal}
+.lb-button{width: 70%;height: 1rem;background: url(../images/lieb2_03.jpg) no-repeat;background-size:100% 100%;border:0px; margin: 0 auto;display: block;color: #fff;font-size: .38rem;margin-top: .5rem;border-radius:.6rem;text-align: center;line-height: 1rem;margin-bottom: 3rem;position: relative;z-index: 9}
+
+
+.finel{position: fixed;width: 100%;height: 100%;background: #666;opacity: .6;bottom: 0px;left: 0px;z-index: 1001;display: none}
+.open-window{position: fixed;width: 80%;margin-left: 10%;height: 6rem;background: #fff;z-index: 1002;top:50%;margin-top: -3rem;border-radius: .3rem;display: none}
+.open-box1{width: 90%;margin: 0 auto;margin-top: .5rem;border-bottom: 1px solid #dedede;padding-bottom: .2rem}
+.open-box1 p{color:#747474;font-size: .38rem;line-height: .5rem }
+
+
+.page{width: 90%;margin: 0 auto;text-align: center;position: relative;margin-top: .6rem;z-index: 9;margin-bottom:3rem}
+.layui-laypage-prev ,.layui-laypage-next{display: inline-block;width:45%;background: url(../images/lieb_07.jpg) no-repeat;height: .68rem;background-size: 100% 100%;display: block;line-height: .68rem;color: #fff;margin: 0 auto;margin-top: .1rem;}
+.layui-laypage-prev {
+    float:left;
+}
+.layui-laypage-next{
+    float:right;
+}

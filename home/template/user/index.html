@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我参与的活动</title>
+    <link rel="stylesheet" href="{__PUBLIC__}css/style.css">
+</head>
+<body>
+
+<div class="tab-header">
+    <a href="index.php" class="header-a2">活动列表</a>
+    <a href="index.php?c=user" class="header-a1">我参与的活动</a>
+</div>
+<div class="hd-box3">目前个人积分累计 &nbsp;&nbsp;<span id="count">0</span></div>
+{loop $list $val}
+<div class="hd-box4">
+    <p class="hd-p3">
+        <span class="hd-sp5 lf">{$val['ac_name']} <br /> 第{$val['ad_name']}期</span>
+        <span class="hd-sp2 rt">{if $val['ad_status'] == 3}
+            已开奖
+            {else/}
+            等待开奖
+            {/if}
+        </span>
+        <div class="clearfloat"></div>
+    </p>
+    {if $val['ad_status'] == 3}
+    <p class="hd-p5"><span class="hd-sp4">中奖</span>恭喜您：您中了{if $val['log_awards'] == 0}参与{else/}{$val['log_awards']}等{/if}奖：{$val['log_awards_point']}积分</p>
+    <a href="index.php?a=betlog&id={$val['ad_id']}" class="hd-a1">查看中奖名单</a>
+    {else/}
+    <p class="hd-p4">本次活动扣除{$val['ac_point']}积分</p>
+    {/if}
+</div>
+{/loop}
+<div class="page" id="page"></div>
+<img src="{__PUBLIC__}images/cy1_03.png" class="float-img">
+<br><br><br>
+<div class="foot" id="quit">
+    退出当前账号
+</div>
+<script src="{__PUBLIC__}style.js"></script>
+<script src="{__PUBLIC__}layui.js"></script>
+<script>
+    layui.config({
+        base: '{__PUBLIC__}'
+    }).extend({
+        numberRock: 'numberRock'
+    });
+    layui.use(['jquery','layer','laypage','numberRock'], function(){
+        var $ = layui.$,layer = layui.layer,numberRock=layui.numberRock;
+        var laypage = layui.laypage;
+        laypage.render({
+            elem: 'page',
+            count: {$count},
+            skip: true,
+            layout: ['prev','next'],
+            curr: function(){
+                var page = {$page};
+                return page ? page : 1;
+            }(),
+            jump: function(e, first){
+                if(!first){
+                    if(!first){
+                        var href = window.location.href.replace(/&page=\d*/,'');
+                        window.location.href = href + '&page='+e.curr;
+                    }
+                }
+            }
+        });
+
+        $("#quit").click(function(){
+            layer.open({
+                type: 0,
+                title: '提示',
+                content: '确定退出当前登录吗?',
+                icon:5,
+                btn:['确定','取消'],
+                yes: function(index, layero){
+                    window.location.href='index.php?c=user&a=logout';
+                }
+            });
+        });
+        numberRock('#count',{
+            lastNumber:{$user['us_point']},
+            duration:1000,
+            easing:'swing',  //慢快慢
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?php if (!defined('IN_FW')) exit('Access Denied');?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>修改密码 - 管理后台</title>
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/layui.css" media="all">
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+<div class="layui-col-md12">
+    <blockquote class="layui-elem-quote title">
+        <span class="layui-breadcrumb">
+            <a href="javascript:void(0);">系统设置</a>
+            <a><cite>修改密码</cite></a>
+        </span>
+    </blockquote>
+    <div class="layui-elem-quote layui-quote-nm magb0">
+        <form class="layui-form layui-form-pane" action="" method="post">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">旧密码</label>
+                    <div class="layui-input-inline">
+                        <input name="oldPw" autocomplete="off" lay-verify="required" class="layui-input" type="password">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">新密码</label>
+                    <div class="layui-input-inline">
+                        <input name="newPw" autocomplete="off" lay-verify="required" class="layui-input" type="password">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">建议长度大于6，数字加小写字母加大写字母加符号组合</div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">重复密码</label>
+                    <div class="layui-input-inline">
+                        <input name="regPw" autocomplete="off" lay-verify="required" class="layui-input" type="password">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">重复输入密码，以便确认</div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1">提交修改</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="<?php echo __PUBLIC__;?>layui.js"></script>
+<script>
+    layui.use(['element','jquery','layer','form'], function(){
+        var element = layui.element,$ = layui.$,layer = layui.layer,form = layui.form;
+        form.on('submit(demo1)', function(data){
+            var index = layer.load(1);
+            $.post('index.php?c=system&a=resetpd',data.field,function (data) {
+                if(data.status == 1){
+                    layer.close(index);
+                    layer.msg(data.msg, {
+                        time: 3000
+                    }, function(){
+                        window.location.href = 'index.php?c=index&a=login';
+                    });
+                }else{
+                    layer.close(index);
+                    layer.msg(data.msg,{icon:5,shift:6});
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
