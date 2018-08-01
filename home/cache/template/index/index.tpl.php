@@ -5,14 +5,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>活动列表</title>
-    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css">
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=002">
 </head>
 <body>
-<div class="tab-header">
+    <header>
+        <h1>首页</h1>
+    </header>
+    <div class="banner">
+        <div class="banner__user">
+            <img src="../../../static/images/index_user-ico.png" alt="user">
+        </div>
+        <div class="banner__top">
+            <a href="javascript:;">排行榜</a>
+        </div>
+    </div>
+    <div class="news-list">
+        <ul>
+            <li>
+                <i class="news-list__ico"></i><span>玩家 ***836，开出400积分，恭喜、恭喜！</span>
+            </li>
+            <li>
+                <i class="news-list__ico"></i><span>玩家 ***836，开出400积分，恭喜、恭喜！</span>
+            </li>
+            <li>
+                <i class="news-list__ico"></i><span>玩家 ***836，开出400积分，恭喜、恭喜！</span>
+            </li>
+        </ul>
+    </div>
+    <div class="tips">
+        <h2>拆包须知</h2>
+        <p>下注后，在规定时间内才可以拆包、 <a href="javascript:;">游戏规则？</a></p>
+    </div>
+    <div class="timer">
+        <p><span>00:30</span>秒 后开始拆包</p>
+    </div>
+    <div class="red-envelopes">
+        <img src="../../../static/images/index__red.png" alt="">
+        <span class="red-envelopes__status">点击开始</span>
+    </div>
+    <div class="start-button">立即下注</div>
+<div class="tab-header hide">
     <a href="index.php" class="header-a1">活动列表</a>
     <a href="index.php?c=user" class="header-a2">我参与的活动</a>
 </div>
-<div class="lb-box text-center">
+<div class="lb-box text-center hide">
     <div class="lf lb-width"><p class="lb-p1" id="count">0</p><p class="lb-p2">个人积分</p></div>
     <div class="rt lb-width" ><p class="lb-p1"><?php echo $count;?></p><p class="lb-p2">正在进行的活动</p></div>
     <div class="clearfloat"></div>
@@ -39,7 +75,7 @@
     </div>
 </div>
 <?php }} ?>
-<div class="page" id="page"></div>
+<div class="page hide" id="page"></div>
 <img src="<?php echo __PUBLIC__;?>images/cy1_03.png" class="float-img" style="bottom: 0px">
 <br><br><br>
 <div class="foot" id="quit">

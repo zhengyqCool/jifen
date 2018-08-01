@@ -11,7 +11,7 @@
 <div class="login">
     <div class="text-center">
         <p class="login-p1">welcome</p>
-        <p class="login-p2">积分营销平台</p>
+        <p class="login-p2">积分平台</p>
         <p class="login-p3">登录</p>
         <p class="login-p4">the login</p>
     </div>
