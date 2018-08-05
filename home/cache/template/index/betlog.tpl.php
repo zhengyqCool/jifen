@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>活动列表</title>
-    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css">
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=001">
 </head>
 <body>
 <div class="tab-header">
@@ -43,9 +43,6 @@
     </table>
 </div>
 <img src="<?php echo __PUBLIC__;?>images/cy1_03.png" class="float-img">
-<div class="foot" id="quit">
-    退出当前账号
-</div>
 <script src="<?php echo __PUBLIC__;?>style.js"></script>
 <script src="<?php echo __PUBLIC__;?>layui.js"></script>
 <script>

@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css">
 </head>
 <body>
-<div class="tab-header">
-    <a href="index.php" class="header-a1">活动列表</a>
-    <a href="index.php?c=user" class="header-a2">我参与的活动</a>
-</div>
+<header class="active">
+    <a class="header__back" href="index.php"><span>&lsaquo;</span> 返回</a>
+    <h1>活动详情</h1>
+</header>
 <div class="lb-box5">
     <div class="lf" style="width: 70%">
         <div class="lb-p8"><span><?php echo $activity['ac_name'];?> - 第<?php echo $info['ad_name'];?>期</span></div>
@@ -59,7 +59,6 @@
     <a href="index.php" class="lb-a1">返回活动列表</a>
 </div>
 <img src="<?php echo __PUBLIC__;?>images/cy1_03.png" class="float-img">
-<div class="foot" id="quit">退出当前账号</div>
 <script src="<?php echo __PUBLIC__;?>style.js"></script>
 <script src="<?php echo __PUBLIC__;?>layui.js"></script>
 <script>

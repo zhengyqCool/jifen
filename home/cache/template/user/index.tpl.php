@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>我参与的活动</title>
-    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css">
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=001">
 </head>
 <body>
 <header class="active">
