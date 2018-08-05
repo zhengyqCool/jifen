@@ -4,23 +4,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>活动列表</title>
-    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=002">
+    <title>首页</title>
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=006">
 </head>
 <body>
+    <div class="model-bg"></div>
+    <div class="menu">
+        <div class="menu-head">
+            <p>账户：</p>
+            <span>188888888888</span>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.php?c=user">购买记录</a></li>
+            <li><a href="javascript:;">充值记录</a></li>
+            <li><a href="javascript:;">提现记录</a></li>
+        </ul>
+        <div class="sign-out" id="quit">
+            <button>退出账号</button>
+        </div>
+    </div>
     <header>
         <h1>首页</h1>
     </header>
     <div class="banner">
-        <div class="banner__user">
+        <div class="banner__user" id="user">
             <img src="../../../static/images/index_user-ico.png" alt="user">
         </div>
-        <div class="banner__top">
+        <!-- <div class="banner__top">
             <a href="javascript:;">排行榜</a>
-        </div>
+        </div> -->
     </div>
     <div class="news-list">
-        <ul>
+        <!-- <ul>
             <li>
                 <i class="news-list__ico"></i><span>玩家 ***836，开出400积分，恭喜、恭喜！</span>
             </li>
@@ -30,25 +45,38 @@
             <li>
                 <i class="news-list__ico"></i><span>玩家 ***836，开出400积分，恭喜、恭喜！</span>
             </li>
-        </ul>
+        </ul> -->
+        <div class="lf lb-width" style="border-right: 1px solid #dfdfdd"><p class="lb-p1" id="count">9850</p><p class="lb-p2">个人积分</p></div>
+        <div class="rt lb-width"><p class="lb-p1"><?php echo $count;?></p><p class="lb-p2">正在进行的活动</p></div>
     </div>
     <div class="tips">
-        <h2>拆包须知</h2>
-        <p>下注后，在规定时间内才可以拆包、 <a href="javascript:;">游戏规则？</a></p>
+        <h2>游戏规则</h2>
+        <p>开奖后会产生，一等奖、二等奖、... <a href="javascript:;">游戏规则？</a></p>
+    </div>
+    <?php if(is_array($list)){foreach ((array)$list as $val) {?>
+    <div class="number-periods">
+        <p class=""record>第<?php echo $val['ad_name'];?>期</p>
     </div>
     <div class="timer">
-        <p><span>00:30</span>秒 后开始拆包</p>
+        <p><span><?php echo @date('H:i:s',$val['ad_lotterytime']);?></span> 开奖</p>
     </div>
     <div class="red-envelopes">
-        <img src="../../../static/images/index__red.png" alt="">
-        <span class="red-envelopes__status">点击开始</span>
+        <a href="index.php?c=user">
+            <img src="../../../static/images/index__red.png" alt="">
+            <span class="red-envelopes__status">查看开奖</span>
+        </a>
     </div>
-    <div class="start-button">立即下注</div>
-<div class="tab-header hide">
+    <a class="start-button" href="index.php?a=lists&id=<?php echo $val['ac_id'];?>">
+        <span>参与积分</span>
+        <span><?php echo $val['ac_point'];?></span>
+        &nbsp;立即参与
+    </a>
+    <?php }} ?>
+<!-- <div class="tab-header">
     <a href="index.php" class="header-a1">活动列表</a>
     <a href="index.php?c=user" class="header-a2">我参与的活动</a>
 </div>
-<div class="lb-box text-center hide">
+<div class="lb-box text-center">
     <div class="lf lb-width"><p class="lb-p1" id="count">0</p><p class="lb-p2">个人积分</p></div>
     <div class="rt lb-width" ><p class="lb-p1"><?php echo $count;?></p><p class="lb-p2">正在进行的活动</p></div>
     <div class="clearfloat"></div>
@@ -76,11 +104,7 @@
 </div>
 <?php }} ?>
 <div class="page hide" id="page"></div>
-<img src="<?php echo __PUBLIC__;?>images/cy1_03.png" class="float-img" style="bottom: 0px">
-<br><br><br>
-<div class="foot" id="quit">
-    退出当前账号
-</div>
+<img src="<?php echo __PUBLIC__;?>images/cy1_03.png" class="float-img" style="bottom: 0px"> -->
 <script src="<?php echo __PUBLIC__;?>style.js"></script>
 <script src="<?php echo __PUBLIC__;?>layui.js"></script>
 <script>
@@ -128,6 +152,14 @@
             duration:1000,
             easing:'swing',  //慢快慢
         });
+        $('#user').click(function() {
+            $('.model-bg').fadeIn('100')
+            $('.menu').addClass('menu-show')
+        })
+        $('.model-bg').click(function() {
+            $(this).fadeOut('100')
+            $('.menu').removeClass('menu-show')
+        })
     });
 </script>
 </body>

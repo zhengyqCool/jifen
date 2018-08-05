@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css">
 </head>
 <body>
-
-<div class="tab-header">
-    <a href="index.php" class="header-a2">活动列表</a>
-    <a href="index.php?c=user" class="header-a1">我参与的活动</a>
-</div>
-<div class="hd-box3">目前个人积分累计 &nbsp;&nbsp;<span id="count">0</span></div>
-<?php if(is_array($list)){foreach ((array)$list as $val) {?>
+<header class="active">
+    <a class="header__back" href="index.php"><span>&lsaquo;</span> 返回</a>
+    <h1>购买记录</h1>
+</header>
+<?php if(is_array($list)){ foreach ((array)$list as $val) {?>
 <div class="hd-box4">
     <p class="hd-p3">
-        <span class="hd-sp5 lf"><?php echo $val['ac_name'];?> <br /> 第<?php echo $val['ad_name'];?>期</span>
+        <!-- <span class="hd-sp5 lf"><?php echo $val['ac_name'];?> <br />  -->
+        第<?php echo $val['ad_name'];?>期</span>
         <span class="hd-sp2 rt"><?php if ($val['ad_status'] == 3) { ?>
             已开奖
             <?php } else { ?>
@@ -36,10 +35,6 @@
 <?php }} ?>
 <div class="page" id="page"></div>
 <img src="<?php echo __PUBLIC__;?>images/cy1_03.png" class="float-img">
-<br><br><br>
-<div class="foot" id="quit">
-    退出当前账号
-</div>
 <script src="<?php echo __PUBLIC__;?>style.js"></script>
 <script src="<?php echo __PUBLIC__;?>layui.js"></script>
 <script>

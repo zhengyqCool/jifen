@@ -64,7 +64,7 @@ a:hover,a:visited{
 .hd-box2{background: #ececec;}
 .hd-sp1{background: #ff5b6c;color: #fff;display: inline-block;width: 24px;height: 24px;line-height: 24px;border-radius:12px}
 .foot{position: fixed;width: 100%;height: 1.2rem;line-height: 1.2rem;background: #999999;color: #000;opacity: .9;font-size: .37rem;text-align: center;bottom: 0px;z-index: 10}
-.float-img{width: 1.6rem;height:1.5rem;position:fixed;right: 0px;bottom: 1.2rem}
+.float-img{width: 1.6rem;height:1.5rem;position:fixed;right: 0px;bottom: 0}
 .float-img2{position: absolute;left: 0px;bottom: 4rem;width: 1rem}
 
 .hd-box3{width: 80%;height: 1rem;color: #fff;line-height: 1rem;background: url(../images/icon5.jpg) no-repeat;background-size: 100% 100%;padding-left: 5%;margin: 0 auto;font-size: 14px;margin-top: 30px;margin-bottom: 20px}
@@ -109,7 +109,7 @@ a:hover,a:visited{
 
 
 .page{width: 90%;margin: 0 auto;text-align: center;position: relative;margin-top: .6rem;z-index: 9;margin-bottom:3rem}
-.layui-laypage-prev ,.layui-laypage-next{display: inline-block;width:45%;background: url(../images/lieb_07.jpg) no-repeat;height: .68rem;background-size: 100% 100%;display: block;line-height: .68rem;color: #fff;margin: 0 auto;margin-top: .1rem;}
+.layui-laypage-prev ,.layui-laypage-next{display: inline-block;width:45%;background: url(../images/lieb_07.jpg) no-repeat;height: .9rem;background-size: 100% 100%;display: block;line-height: .9rem;color: #fff;margin: 0 auto;margin-top: .1rem;}
 .layui-laypage-prev {
     float:left;
 }
@@ -117,12 +117,29 @@ a:hover,a:visited{
     float:right;
 }
 header {
+	position: relative;
 	height: 45px;
 	line-height: 45px;
 	text-align: center;
 	background: #fff;
 }
+header.active {
+	background: #ff684d;
+	color: #fff;
+}
+header.active a {
+	color: #fff;
+}
 header h1 {
+	font-size: 18px;
+}
+.header__back {
+	position: absolute;
+	left: 15px;
+	top: 0;
+	font-size: 14px;
+}
+.header__back span {
 	font-size: 18px;
 }
 div.banner {
@@ -152,14 +169,15 @@ div.banner {
 	font-size: 14px;
 }
 .news-list {
+	text-align: center;
 	width: 80%;
-	height: 88px;
-	padding: 5px 10px;
+	padding: 15px 10px;
 	overflow: hidden;
 	margin: -20px auto 25px;
 	border-radius: 4px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 	background: #fff;
+	color: #757575;
 }
 .news-list li {
 	padding: 3px 0;
@@ -191,7 +209,7 @@ div.tips h2 {
 div.tips p {
 	margin-bottom: 15px;
 	padding: 5px 0;
-	font-size: 14px;
+	font-size: .38rem;
 	color: #757575;
 }
 div.timer {
@@ -206,9 +224,14 @@ div.timer {
 	text-align: center;
 }
 .red-envelopes {
-	position: relative;
 	width: 92px;
 	margin: 30px auto;
+}
+.red-envelopes a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 .red-envelopes__status {
 	position: absolute;
@@ -220,6 +243,7 @@ div.timer {
 	width: 100%;
 }
 .start-button {
+	display: block;
 	width: 80%;
 	height: 40px;
 	line-height: 40px;
@@ -228,5 +252,74 @@ div.timer {
 	text-align: center;
 	border-radius: 4px;
 	margin: 20px auto;
+	font-size: 16px;
+}
+.model-bg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .6);
+	z-index: 999;
+	display: none;
+}
 
+.menu {
+	padding: 0 15px;
+	position: fixed;
+	z-index: 1005;
+	width: 45%;
+	height: 100%;
+	background: #fff;
+	transition: all 0.3s;
+	transform: translateX(-100%);	
+}
+.menu-show {
+	transform: translateX(0);
+}
+.menu-head {
+	padding: 20px 0;
+	border-bottom: 1px solid #dfdfdd;
+}
+.menu-head p {
+	font-size: 14px;
+	color: #757575;
+}
+.menu-head span {
+	font-size: 16px;
+	color: #585858;
+	font-weight: bold;
+}
+.menu-list {
+	padding: 10px 0;
+}
+.menu-list li {
+	padding: 15px 0;
+	font-size: 14px;
+}
+.meni-list a {
+	color: #757575;
+}
+.sign-out {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 45px;
+}
+.sign-out button {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background: #f14c4c;
+	border: 0;
+	outline: none;
+	font-size: 14px;
+}
+.number-periods {
+	width: 80%;
+	margin: 0 auto 5px;
+	font-size: 14px;
+	color: #c91717;
 }
