@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>首页</title>
-    <link rel="stylesheet" href="{__PUBLIC__}css/style.css?t=007">
+    <link rel="stylesheet" href="{__PUBLIC__}css/style.css?t=008">
 </head>
 <body>
     <div class="model-bg"></div>
     <div class="menu">
         <div class="menu-head">
             <p>账户：</p>
-            <span>188888888888</span>
+            <span>{$user['us_phone']}</span>
         </div>
         <ul class="menu-list">
             <li><a href="index.php?c=user">购买记录</a></li>
@@ -45,7 +45,7 @@
                 <i class="news-list__ico"></i><span>玩家 ***836，开出400积分，恭喜、恭喜！</span>
             </li>
         </ul> -->
-        <div class="lf lb-width" style="border-right: 1px solid #dfdfdd"><p class="lb-p1" id="count">9850</p><p class="lb-p2">个人积分</p></div>
+        <div class="lf lb-width" style="border-right: 1px solid #dfdfdd"><p class="lb-p1" id="count"></p><p class="lb-p2">个人积分</p></div>
         <div class="rt lb-width"><p class="lb-p1">{$count}</p><p class="lb-p2">正在进行的活动</p></div>
     </div>
     <div class="tips">
@@ -53,6 +53,7 @@
         <p>开奖后会产生，一等奖、二等奖、... <a href="javascript:;">游戏规则？</a></p>
     </div>
     {loop $list $val}
+    <input type="hidden" id="Off">
     <div class="number-periods">
         <p class=""record>第{$val['ad_name']}期</p>
     </div>
@@ -71,6 +72,13 @@
         &nbsp;立即参与
     </a>
     {/loop}
+    <div id="nullDom" class="null-dom hide">
+        <p>已截止下注</p>
+        <p>稍后请刷新从试</p>
+        <div class="null-img">
+            <img src="../../../static/images/null.png" alt="">
+        </div>
+    </div>
 <!-- <div class="tab-header">
     <a href="index.php" class="header-a1">活动列表</a>
     <a href="index.php?c=user" class="header-a2">我参与的活动</a>
@@ -134,6 +142,13 @@
         });
 
         var $ = layui.$,layer = layui.layer,numberRock=layui.numberRock;
+
+        if (!$('Off').length > 0) {
+            $('#nullDom').show()
+        } else {
+            $('#nullDom').hide()
+        }
+
         $("#quit").click(function(){
             layer.open({
                 type: 0,
