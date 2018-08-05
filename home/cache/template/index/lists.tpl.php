@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>活动详情</title>
-    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css">
+    <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=001">
 </head>
 <body>
 <header class="active">
@@ -14,7 +14,7 @@
 </header>
 <div class="lb-box5">
     <div class="lf" style="width: 70%">
-        <div class="lb-p8"><span><?php echo $activity['ac_name'];?> - 第<?php echo $info['ad_name'];?>期</span></div>
+        <div class="lb-p8"><span>第<?php echo $info['ad_name'];?>期</span></div>
         <p class="lb-p4">开奖时间<br /><?php echo @date('H:i:s',$info['ad_lotterytime']);?></p>
     </div>
     <div class="rt lb-box4" style="width: 30%">

@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="<?php echo __PUBLIC__;?>css/style.css?t=001">
 </head>
 <body>
-<div class="tab-header">
-    <a href="index.php" class="header-a1">活动列表</a>
-    <a href="index.php?c=user" class="header-a2">我参与的活动</a>
-</div>
+<header class="active">
+    <a class="header__back" href="index.php?c=user"><span>&lsaquo;</span> 返回</a>
+    <h1>中奖名单</h1>
+</header>
 <div class="text-center">
-    <p class="hd-p1"><?php echo $activity['ac_name'];?> - 第<?php echo $info['ad_name'];?>期</p>
+    <p class="hd-p1">第<?php echo $info['ad_name'];?>期</p>
     <?php if ($user_info) { ?>
     <p class="hd-p2">
         恭喜您：您中了<?php if ($user_info['log_awards'] == 0) { ?>参与<?php } else { ?><?php echo $user_info['log_awards'];?>等<?php } ?>奖：<?php echo $user_info['log_awards_point'];?>积分
