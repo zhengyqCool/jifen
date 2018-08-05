@@ -54,7 +54,6 @@
         <p>开奖后会产生，一等奖、二等奖、... <a href="javascript:;">游戏规则？</a></p>
     </div>
     <?php if(is_array($list)){foreach ((array)$list as $val) {?>
-    <input type="hidden" id="Off">
     <div class="number-periods">
         <p class=""record>第<?php echo $val['ad_name'];?>期</p>
     </div>
@@ -144,11 +143,13 @@
 
         var $ = layui.$,layer = layui.layer,numberRock=layui.numberRock;
 
-        if (!$('Off').length > 0) {
-            $('#nullDom').show()
-        } else {
-            $('#nullDom').hide()
-        }
+        $(function() {
+            if ($('#Off').length > 0) {
+                $('#nullDom').hide()
+            } else {
+                $('#nullDom').show()
+            }
+        })
 
         $("#quit").click(function(){
             layer.open({

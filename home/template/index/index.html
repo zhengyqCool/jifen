@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>首页</title>
-    <link rel="stylesheet" href="{__PUBLIC__}css/style.css?t=008">
+    <link rel="stylesheet" href="{__PUBLIC__}css/style.css?t=007">
 </head>
 <body>
     <div class="model-bg"></div>
     <div class="menu">
         <div class="menu-head">
             <p>账户：</p>
-            <span>{$user['us_phone']}</span>
+            <span>188888888888</span>
         </div>
         <ul class="menu-list">
             <li><a href="index.php?c=user">购买记录</a></li>
@@ -71,13 +71,6 @@
         &nbsp;立即参与
     </a>
     {/loop}
-    <div id="nullDom" class="null-dom hide">
-        <p>已截止下注</p>
-        <p>稍后请刷新从试</p>
-        <div class="null-img">
-            <img src="../../../static/images/null.png" alt="">
-        </div>
-    </div>
 <!-- <div class="tab-header">
     <a href="index.php" class="header-a1">活动列表</a>
     <a href="index.php?c=user" class="header-a2">我参与的活动</a>
@@ -141,15 +134,6 @@
         });
 
         var $ = layui.$,layer = layui.layer,numberRock=layui.numberRock;
-
-        $(function() {
-            if ($('#Off').length > 0) {
-                $('#nullDom').hide()
-            } else {
-                $('#nullDom').show()
-            }
-        })
-
         $("#quit").click(function(){
             layer.open({
                 type: 0,
