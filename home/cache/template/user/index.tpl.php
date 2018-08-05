@@ -15,7 +15,6 @@
 <?php if(is_array($list)){ foreach ((array)$list as $val) {?>
 <div class="hd-box4">
     <p class="hd-p3">
-        <!-- <span class="hd-sp5 lf"><?php echo $val['ac_name'];?> <br />  -->
         第<?php echo $val['ad_name'];?>期</span>
         <span class="hd-sp2 rt"><?php if ($val['ad_status'] == 3) { ?>
             已开奖
